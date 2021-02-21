@@ -10,4 +10,4 @@ WORKDIR /src
 EXPOSE 8080
 
 RUN pip install --no-cache-dir -r requirements.txt
-CMD ["gunicorn", "-w", "4", "-k", "uvicorn.workers.UvicornWorker", "-b", "'0.0.0.0:8080'", "app:app" ]
+CMD ["gunicorn", "-w", "4", "-k", "uvicorn.workers.UvicornWorker", "-b", "'0.0.0.0:8080'", "index:app" ]
